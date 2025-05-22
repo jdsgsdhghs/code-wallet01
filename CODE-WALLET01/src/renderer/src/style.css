@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: #ffffff;
+  color: #333;
+}
+
+header {
+  background-color: #333333;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+nav a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  nav a.new {
+    background-color: #9A48D0;
+    color: white;
+    border-radius: 5px;
+    padding: 0.4rem 1rem;
+    font-weight: 600;
+    margin-left: 1.5rem;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  nav a.new:hover {
+    background-color: #B288C0;
+  }
+  
+
+
+
+
+main {
+  padding: 2rem;
+}
+.form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .form input,
+  .form textarea {
+    font-family: 'Montserrat', sans-serif;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .form button {
+    background-color: #7BC950;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .form button:hover {
+    background-color: #68b142;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+    /* PAGE FRAGMENTS */
+.fragments-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.fragments-title {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: #333;
+}
+
+.no-fragments {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+}
+
+.fragments-list {
+  list-style: none;
+  padding: 0;
+}
+
+.fragment-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  transition: box-shadow 0.3s;
+}
+
+.fragment-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.fragment-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #222;
+}
+
+.fragment-tags {
+  color: #777;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.fragment-code {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+}
+
+.fragment-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+}
+
+/* BOUTONS */
+.btn {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Voir */
+.btn-view {
+  background-color: #9A48D0; 
+  color: white;
+}
+.btn-view:hover {
+  background-color: #B288C0; 
+  transform: translateY(-2px);
+}
+
+/* Modifier */
+.btn-edit {
+  background-color: #7BC950;
+  color: white;
+}
+.btn-edit:hover {
+  background-color: #5ea73b; 
+  transform: translateY(-2px);
+}
+
+/* Supprimer */
+.btn-delete {
+  background-color: #333333; 
+  color: white;
+}
+.btn-delete:hover {
+  background-color: #000000; 
+  transform: translateY(-2px);
+} 
+/* Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+  animation: pop 0.3s ease;
+}
+
+.modal-code {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.btn-copy {
+  background-color: #7BC950;
+  color: white;
+}
+
+.btn-copy:hover {
+  background-color: #65a73f;
+}
+
+.btn-close {
+  background-color: #9A48D0;
+  color: white;
+}
+
+.btn-close:hover {
+  background-color: #B288C0;
+}
+/* PAGE INFO */
+.info-page {
+  max-width: 700px;
+  margin: 4rem auto;
+  padding: 2rem;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.info-page h1 {
+  font-size: 2.8rem;
+  color: #9A48D0;
+  margin-bottom: 1rem;
+}
+
+.info-page h2 {
+  font-size: 1.5rem;
+  color: #B288C0;
+  margin-bottom: 2rem;
+}
+
+.info-page p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+/* BOUTONS DE LA PAGE TAGS */
+.tag-btn {
+  background-color: #9A48D0; /* Violet principal */
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.tag-btn:hover {
+  background-color: #B288C0; /* Violet plus clair au survol */
+  transform: translateY(-2px); /* petit effet "saut" */
+}
+
+.tag-btn-active {
+  background-color: #7BC950; /* Vert quand sélectionné */
+  color: #333333;
+}
+
+.tag-btn-clear {
+  background-color: #e2e8f0; /* Gris clair pour le bouton "Clear" */
+  color: #333333;
+}
+.dark .fragment-card {
+  background-color: #2a2a2a;  /* fond sombre, ton gris foncé */
+  border-color: #444;         /* bord plus visible */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+  color: #e0e0e0;             /* texte clair */
+}
+
+.dark .fragment-card:hover {
+  background-color: #3a3a3a;  /* un peu plus clair au hover */
+}
+.dark .fragment-title {
+  color: #e0e0e0;
+}
